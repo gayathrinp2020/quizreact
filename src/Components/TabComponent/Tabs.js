@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import TabNavItem from "../TabNavItem";
 import TabContent from "../TabContent";
 import QuizContent1 from "../QuizComponent/QuizContent1";
+import QuizContent2 from "../QuizComponent/QuizContent2";
 
 const Tabs = (props) => {
   // Accessing the passed props
-  const { Quiznames, Quizcomponents } = props;
+  const { Quiznames, questions } = props;
   const [activeTab, setActiveTab] = useState("tab1");
 
   return (
@@ -74,8 +75,16 @@ const Tabs = (props) => {
       </ul>
 
       <div className="outlet">
-        {activeTab === "tab1" && <Quizcomponents.prop1 />}
-        {activeTab === "tab2" && <Quizcomponents.prop2 />}
+        {/* {activeTab === "tab1" && <Quizcomponents.prop1 />}
+        {activeTab === "tab2" && <Quizcomponents.prop2 />} */}
+        <TabContent id="tab1" activeTab={activeTab}>
+          <QuizContent1 />
+        </TabContent>
+
+        <TabContent id="tab2" activeTab={activeTab}>
+          <QuizContent2 questions={props.questions} />
+        </TabContent>
+
         <TabContent id="tab10" activeTab={activeTab}>
           <p>tab10 works!</p>
         </TabContent>

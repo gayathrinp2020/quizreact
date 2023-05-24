@@ -27,7 +27,7 @@ function App() {
         <Route path="/topic3" element={<Topic3 />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <footer>coptRight@2020</footer>
+      {/* <footer>coptRight@2020</footer> */}
     </Router>
   );
 }
