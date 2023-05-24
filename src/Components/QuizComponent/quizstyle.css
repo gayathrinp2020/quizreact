@@ -12,6 +12,7 @@
   
   .question-section {
     margin-bottom: 20px;
+    /* text-align: center; */
   }
   
   .question-count {
@@ -26,16 +27,22 @@
   }
   
   .answer-section {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 10px; */
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    text-align: center;
+    justify-content: center;
   }
   
   .answer-button {
     display: block;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #fff;
     text-align: center;
     cursor: pointer;
@@ -45,7 +52,8 @@
     text-align: center;
   }
   .next-button{
-    align-items: center;
+    width: 150px;
+    align-items: left;
     margin-top: 10%;
     background-color: rgb(128, 85, 66);
   }

@@ -88,6 +88,7 @@ const QuizContent2 = () => {
               </button>
             ))}
           </div>
+          <div className="next">
           <button
             className="next-button"
             onClick={handleNextQuestion}
@@ -95,6 +96,7 @@ const QuizContent2 = () => {
           >
             Next
           </button>
+          </div>
         </>
       )}
     </div>
