@@ -1,5 +1,3 @@
-
-
   .quiz-container {
    width: 90%;
    height: 65vh;
@@ -64,5 +62,19 @@
   
   .answer-button.selected {
     background-color: #a8d8ff;
+  }
+  .score-section{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(69 60 60);
+    background-image: url("trophy.png");
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+  }
+  .score-text{
+    padding: 20% 1%;
+    font-size: 20px;
+    font-weight: 700;
   }
   

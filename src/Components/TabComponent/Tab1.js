@@ -11,6 +11,15 @@ const Tabs = (props) => {
   return (
     <div className="Tabs">
       <ul className="nav">
+        {/* {props.Quiznames.map((item, index) => (
+          <TabNavItem
+            key={`tab${index + 1}`}
+            title={item}
+            id={`tab${index + 1}`}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+        ))} */}
         <TabNavItem
           title={Quiznames.prop1}
           id="tab1"
@@ -41,36 +50,6 @@ const Tabs = (props) => {
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
-        <TabNavItem
-          title="Tab 6"
-          id="tab6"
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-        />
-        <TabNavItem
-          title="Tab 7"
-          id="tab7"
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-        />
-        <TabNavItem
-          title="Tab 8"
-          id="tab8"
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-        />
-        <TabNavItem
-          title="Tab 9"
-          id="tab9"
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-        />
-        <TabNavItem
-          title="Tab 10"
-          id="tab10"
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-        />
       </ul>
 
       <div className="outlet">
@@ -82,8 +61,8 @@ const Tabs = (props) => {
           <QuizContent2 />
         </TabContent>
 
-        <TabContent id="tab10" activeTab={activeTab}>
-          <p>tab10 works!</p>
+        <TabContent id="tab3" activeTab={activeTab}>
+          <p>tab3 works!</p>
         </TabContent>
       </div>
     </div>
