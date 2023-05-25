@@ -1,50 +1,30 @@
 import React, { useState } from "react";
 import "./quizstyle.css"; // Import the CSS file for styling
 
-const QuizContent1 = () => {
-  const questions = [
-      {
-        question: "What is Python?",
-        options: [
-          "A high-level programming language",
-          "A type of snake",
-          "A computer hardware",
-          "A software development tool",
-        ],
-        answer: "A high-level programming language",
-      },
-      {
-        question: "What is the syntax for printing in Python?",
-        options: [
-          "console.log()",
-          "print()",
-          "System.out.println()",
-          "cout <<",
-        ],
-        answer: "print()",
-      },
-      {
-        question: "What is the result of the expression '3 + 2 * 4' in Python?",
-        options: ["9", "20", "11", "7"],
-        answer: "11",
-      },
-      {
-        question: "Which of the following is not a Python data type?",
-        options: ["String", "Integer", "Boolean", "Float"],
-        answer: "Boolean",
-      },
-      {
-        question: "What is the correct way to create a function in Python?",
-        options: [
-          "function myFunction()",
-          "def myFunction():",
-          "create function myFunction():",
-          "function = myFunction():",
-        ],
-        answer: "def myFunction():",
-      },
-  ];
-
+const QuizContent = (props) => {
+  // const questions = [
+  //   {
+  //     question: "What is the capital of France?",
+  //     options: ["Paris", "Madrid", "Rome", "Berlin"],
+  //     answer: "Paris",
+  //   },
+  //   {
+  //     question: "Which planet is known as the Red Planet?",
+  //     options: ["Venus", "Mars", "Jupiter", "Saturn"],
+  //     answer: "Mars",
+  //   },
+  //   {
+  //     question: "What is the largest ocean in the world?",
+  //     options: [
+  //       "Atlantic Ocean",
+  //       "Indian Ocean",
+  //       "Arctic Ocean",
+  //       "Pacific Ocean",
+  //     ],
+  //     answer: "Pacific Ocean",
+  //   },
+  // ];
+  const { questions } = props;
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [score, setScore] = useState(0);
@@ -109,13 +89,13 @@ const QuizContent1 = () => {
             ))}
           </div>
           <div className="next">
-          <button
-            className="next-button"
-            onClick={handleNextQuestion}
-            disabled={!userAnswer}
-          >
-            Next
-          </button>
+            <button
+              className="next-button"
+              onClick={handleNextQuestion}
+              disabled={!userAnswer}
+            >
+              Next
+            </button>
           </div>
         </>
       )}
@@ -123,4 +103,4 @@ const QuizContent1 = () => {
   );
 };
 
-export default QuizContent1;
+export default QuizContent;

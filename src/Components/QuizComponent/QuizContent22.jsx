@@ -1,30 +1,35 @@
 import React, { useState } from "react";
 import "./quizstyle.css"; // Import the CSS file for styling
 
-const QuizContent2 = (props) => {
-  //   const questions = [
-  //     {
-  //       question: "What is the capital of France?",
-  //       options: ["Paris", "Madrid", "Rome", "Berlin"],
-  //       answer: "Paris",
-  //     },
-  //     {
-  //       question: "Which planet is known as the Red Planet?",
-  //       options: ["Venus", "Mars", "Jupiter", "Saturn"],
-  //       answer: "Mars",
-  //     },
-  //     {
-  //       question: "What is the largest ocean in the world?",
-  //       options: [
-  //         "Atlantic Ocean",
-  //         "Indian Ocean",
-  //         "Arctic Ocean",
-  //         "Pacific Ocean",
-  //       ],
-  //       answer: "Pacific Ocean",
-  //     },
-  //   ];
-  const { questions } = props;
+const QuizContent22 = () => {
+  const questions = [
+      {
+        question: "What is the data type used to represent whole numbers in Java?",
+        options: ["int", "float", "boolean", "String"],
+        answer: "int",
+      },
+      {
+        question: "Which data type is used to represent a single character in Java?",
+        options: ["char", "byte", "long", "double"],
+        answer: "char",
+      },
+      {
+        question: "Which data type is used to represent true or false values in Java?",
+        options: ["boolean", "String", "int", "double"],
+        answer: "boolean",
+      },
+      {
+        question: "What is the data type used to represent decimal numbers with single precision in Java?",
+        options: ["float", "double", "char", "long"],
+        answer: "float",
+      },
+      {
+        question: "Which data type is used to represent text in Java?",
+        options: ["String", "int", "boolean", "byte"],
+        answer: "String",
+      },
+  ];
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [score, setScore] = useState(0);
@@ -103,4 +108,4 @@ const QuizContent2 = (props) => {
   );
 };
 
-export default QuizContent2;
+export default QuizContent22;
