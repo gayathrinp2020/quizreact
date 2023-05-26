@@ -77,11 +77,17 @@ const QuizContent1 = () => {
             You scored {score} out of {questions.length}
           </div>
           <div className="score-percentage">
-            Percentage = {score}/{questions.length}*100
+            Percentage = {(score * 100 / questions.length).toFixed(1)} %
           </div>
-          <button className="restart-button" onClick={handleRestartQuiz}>
-            Restart
-          </button>
+          <div className="score-comment">
+           {(score * 100 / questions.length).toFixed(1) >= 70.0 ? "Passed" : "Failed"}
+          </div>
+          <div>{((score * 100) / questions.length).toFixed(1) >= 90.0 ? "Excellent" : null}</div>
+          <div className="restart">
+            <button className="restart-button" onClick={handleRestartQuiz}>
+              Restart
+            </button>
+          </div>
         </div>
       ) : (
         <>
@@ -97,9 +103,8 @@ const QuizContent1 = () => {
             {questions[currentQuestion].options.map((option, index) => (
               <button
                 key={index}
-                className={`answer-button ${
-                  userAnswer === option ? "selected" : ""
-                }`}
+                className={`answer-button ${userAnswer === option ? "selected" : ""
+                  }`}
                 onClick={() => handleAnswerOptionClick(option)}
               >
                 {option}

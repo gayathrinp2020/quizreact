@@ -1,80 +1,92 @@
   .quiz-container {
-   width: 90%;
-   height: 65vh;
-    margin: 0 auto;
+    width: 90%;
+    margin: auto;
     padding: 20px;
     background-color: #f3c9c6;
     border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
+
   .question-section {
     margin-bottom: 20px;
-    /* text-align: center; */
+    text-align: center;
   }
-  
+
   .question-count {
     color: black;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
+
   .question-text {
-    font-size: 20px;
+    color: black;
+    font-size: 28px;
+    font-weight: 600;
   }
-  
+
   .answer-section {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px; */
-    width:80%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-    text-align: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
+
   .answer-button {
     display: block;
     padding: 10px;
     border: none;
     border-radius: 20px;
-    background-color: #fff;
+    border: 1px solid #a2a6a7;
+    background-color: #f3c9c6;
     text-align: center;
     cursor: pointer;
     color: black;
+    font-size: 20px;
   }
-  .next{
+
+  .next,
+  .restart {
     text-align: center;
   }
-  .next-button{
+
+  .next-button,
+  .restart-button {
     width: 150px;
+    height: 40px;
+    border-radius: 20px;
     align-items: left;
-    margin-top: 10%;
+    margin-top: 15px;
+    color: #fff;
     background-color: rgb(128, 85, 66);
   }
-  
+  .next-button:hover,.restart-button:hover{
+    background-color: #764c4c;
+  }
+
   .answer-button:hover {
-    background-color: #f0f0f0;
+    background-color: #c1a2e1;
   }
-  
+
   .answer-button.selected {
-    background-color: #a8d8ff;
+    background-color: #5e48f0;
+    color: #fff;
   }
-  .score-section{
+
+  .score-section {
     width: 100%;
-    height: 100%;
+    height: 60vh;
     background-color: rgb(69 60 60);
     background-image: url("trophy.png");
     background-repeat: no-repeat;
     color: #fff;
     text-align: center;
   }
-  .score-text{
-    padding: 20% 1%;
+
+  .score-text {
+    padding-top: 80px;
+    padding-bottom: 10px;
     font-size: 20px;
     font-weight: 700;
   }
-  
