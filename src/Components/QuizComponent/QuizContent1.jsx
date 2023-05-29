@@ -69,6 +69,42 @@ const QuizContent1 = () => {
     setShowScore(false);
   };
 
+  const handleDownloadCertificate = () => {
+    // Create a content string for the certificate
+    const certificateContent = `
+      Certificate of Achievement
+
+      Congratulations!
+
+      You scored ${score} out of ${questions.length}.
+      Percentage: ${(score * 100 / questions.length).toFixed(1)}%
+      Result: ${(score * 100 / questions.length).toFixed(1) >= 70.0 ? "Passed" : "Failed"}
+    `;
+
+    // Create a new blob object with the certificate content
+    const blob = new Blob([certificateContent], { type: "text/plain" });
+
+    // Create a URL for the blob object
+    const url = URL.createObjectURL(blob);
+
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "certificate.txt"; // Set the filename for the certificate
+
+    // Append the link to the document body
+    document.body.appendChild(link);
+
+    // Programmatically click the link to trigger the download
+    link.click();
+
+    // Remove the link from the document body
+    document.body.removeChild(link);
+
+    // Revoke the URL to release memory
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="quiz-container">
       {showScore ? (
@@ -86,6 +122,11 @@ const QuizContent1 = () => {
           <div className="restart">
             <button className="restart-button" onClick={handleRestartQuiz}>
               Restart
+            </button>
+          </div>
+          <div className="download-certificate">
+            <button className="download-button" onClick={handleDownloadCertificate}>
+              Download Certificate
             </button>
           </div>
         </div>
