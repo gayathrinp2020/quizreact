@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TabNavItem from "../TabNavItem";
 import TabContent from "../TabContent";
 import QuizContent1 from "../QuizComponent/QuizContent1";
 import QuizContent2 from "../QuizComponent/QuizContent2";
 
-const Tabs = (props) => {
+const Tab1 = (props) => {
   const { Quiznames } = props;
   const [activeTab, setActiveTab] = useState("tab1");
 
+  useEffect(() => {
+    // Retrieve the active tab from localStorage on component mount
+    const storedActiveTab = localStorage.getItem("activeTab");
+    if (storedActiveTab) {
+      setActiveTab(storedActiveTab);
+    }
+  }, []);
+
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+    // Store the active tab in localStorage
+    localStorage.setItem("activeTab", tabId);
+  };
   return (
     <div className="Tabs">
       <ul className="nav">
@@ -24,31 +37,31 @@ const Tabs = (props) => {
           title={Quiznames.prop1}
           id="tab1"
           activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          setActiveTab={handleTabChange}
         />
         <TabNavItem
           title={Quiznames.prop2}
           id="tab2"
           activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          setActiveTab={handleTabChange}
         />
         <TabNavItem
           title={Quiznames.prop3}
           id="tab3"
           activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          setActiveTab={handleTabChange}
         />
         <TabNavItem
           title={Quiznames.prop4}
           id="tab4"
           activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          setActiveTab={handleTabChange}
         />
         <TabNavItem
           title="Tab 5"
           id="tab5"
           activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          setActiveTab={handleTabChange}
         />
       </ul>
 
@@ -69,4 +82,4 @@ const Tabs = (props) => {
   );
 };
 
-export default Tabs;
+export default Tab1;
