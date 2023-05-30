@@ -1,16 +1,16 @@
 import React from "react";
 import Tabs from "../Components/TabComponent/Tabs";
 
-function Python() {
+function ReactJS() {
   const Quiznames = {
-    prop1: "Basics",
-    prop2: "Data Types",
-    prop3: "Control Flow",
-    prop4: "Function",
-    prop5: "Data Structures",
-    prop6: "File Handling",
-    prop7: "Exception Handling",
-    prop8: "OOPs Concept",
+    prop1: "Components",
+    prop2: "JSX in React",
+    prop3: "Props and State",
+    prop4: "Lifecycle Methods",
+    prop5: "React Router",
+    prop6: "State Management",
+    prop7: "Hooks",
+    prop8: "Error Handling",
   };
   const Questionset = [
     {
@@ -625,4 +625,4 @@ function Python() {
   );
 }
 
-export default Python;
+export default ReactJS;

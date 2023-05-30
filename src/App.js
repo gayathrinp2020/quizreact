@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import {
   Link,
@@ -8,7 +9,7 @@ import {
 } from "react-router-dom";
 import Python from "./Pages/Python";
 import Javascript from "./Pages/Javascript";
-import Topic1 from "./Pages/Topic1";
+import ReactJS from "./Pages/ReactJS";
 import Error from "./Pages/Error";
 import Topic2 from "./Pages/Topic2";
 import Topic3 from "./Pages/Topic3";
@@ -21,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Python />} />
           <Route path="/javascript" element={<Javascript />} />
-          <Route path="/topic1" element={<Topic1 />} />
+          <Route path="/reactjs" element={<ReactJS />} />
           <Route path="/topic2" element={<Topic2 />} />
           <Route path="/topic3" element={<Topic3 />} />
           <Route path="*" element={<Error />} />
@@ -59,11 +60,11 @@ function Navigation() {
         <li>
           <Link
             className={`link ${
-              location.pathname === "/topic1" ? "active" : ""
+              location.pathname === "/reactjs" ? "active" : ""
             }`}
-            to="/topic1"
+            to="/reactjs"
           >
-            Topic1
+            React
           </Link>
         </li>
         <li>
