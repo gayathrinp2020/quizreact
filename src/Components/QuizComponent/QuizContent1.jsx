@@ -1,5 +1,43 @@
 import React, { useState } from "react";
-import "./quizstyle.css"; // Import the CSS file for styling
+import { PDFDownloadLink, Document, Page, Text, StyleSheet } from "@react-pdf/renderer";
+import "./quizstyle.css"; 
+const styles = StyleSheet.create({
+  page: {
+    fontFamily: "Helvetica",
+    padding: "50px",
+    textAlign: "center",
+    backgroundColor: "#EFEFEF",
+    backgroundImage: "url('trophy.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+     },
+  title: {
+    fontSize: "24px",
+    marginBottom: "20px",
+    fontWeight: "bold",
+  },
+  content: {
+    fontSize: "18px",
+    marginBottom: "10px",
+  },
+});
+
+const Certificate = ({ score, totalQuestions }) => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      <Text style={styles.title}>Certificate of Achievement</Text>
+      <Text style={styles.content}>
+        Congratulations! You scored {score} out of {totalQuestions}.
+      </Text>
+      <Text style={styles.content}>
+        Percentage: {(score * 100 / totalQuestions).toFixed(1)}%
+      </Text>
+      <Text style={styles.content}>
+        Result: {(score * 100 / totalQuestions).toFixed(1) >= 70.0 ? "Passed" : "Failed"}
+      </Text>
+    </Page>
+  </Document>
+);
 
 const QuizContent1 = () => {
   const questions = [
@@ -69,42 +107,7 @@ const QuizContent1 = () => {
     setShowScore(false);
   };
 
-  const handleDownloadCertificate = () => {
-    // Create a content string for the certificate
-    const certificateContent = `
-      Certificate of Achievement
-
-      Congratulations!
-
-      You scored ${score} out of ${questions.length}.
-      Percentage: ${(score * 100 / questions.length).toFixed(1)}%
-      Result: ${(score * 100 / questions.length).toFixed(1) >= 70.0 ? "Passed" : "Failed"}
-    `;
-
-    // Create a new blob object with the certificate content
-    const blob = new Blob([certificateContent], { type: "text/plain" });
-
-    // Create a URL for the blob object
-    const url = URL.createObjectURL(blob);
-
-    // Create a link element
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "certificate.txt"; // Set the filename for the certificate
-
-    // Append the link to the document body
-    document.body.appendChild(link);
-
-    // Programmatically click the link to trigger the download
-    link.click();
-
-    // Remove the link from the document body
-    document.body.removeChild(link);
-
-    // Revoke the URL to release memory
-    URL.revokeObjectURL(url);
-  };
-
+  
   return (
     <div className="quiz-container">
       {showScore ? (
@@ -125,9 +128,11 @@ const QuizContent1 = () => {
             </button>
           </div>
           <div className="download-certificate">
-            <button className="download-button" onClick={handleDownloadCertificate}>
-              Download Certificate
-            </button>
+            <PDFDownloadLink document={<Certificate score={score} totalQuestions={questions.length} />} fileName="certificate.pdf">
+              {({ blob, url, loading, error }) =>
+                loading ? "Loading..." : "Download Certificate"
+              }
+            </PDFDownloadLink>
           </div>
         </div>
       ) : (
