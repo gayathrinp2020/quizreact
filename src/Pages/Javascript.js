@@ -1,5 +1,5 @@
 import React from "react";
-import Tab2 from "../Components/TabComponent/Tab2";
+import Tabs from "../Components/TabComponent/Tabs";
 
 function Javascript() {
   const Quiznames = {

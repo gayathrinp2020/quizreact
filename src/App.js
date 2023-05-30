@@ -1,6 +1,4 @@
 import "./App.css";
-import "./Pages/navstyle.css";
-import { useState, useEffect } from "react";
 import {
   Link,
   BrowserRouter as Router,
@@ -17,18 +15,20 @@ import Topic3 from "./Pages/Topic3";
 
 function App() {
   return (
-    <Router>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Python />} />
-        <Route path="/javascript" element={<Javascript />} />
-        <Route path="/topic1" element={<Topic1 />} />
-        <Route path="/topic2" element={<Topic2 />} />
-        <Route path="/topic3" element={<Topic3 />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-      {/* <footer>coptRight@2020</footer> */}
-    </Router>
+    <div className="App">
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Python />} />
+          <Route path="/javascript" element={<Javascript />} />
+          <Route path="/topic1" element={<Topic1 />} />
+          <Route path="/topic2" element={<Topic2 />} />
+          <Route path="/topic3" element={<Topic3 />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+        {/* <footer>coptRight@2020</footer> */}
+      </Router>
+    </div>
   );
 }
 

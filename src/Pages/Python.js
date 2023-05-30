@@ -1,5 +1,5 @@
 import React from "react";
-import Tab1 from "../Components/TabComponent/Tab1";
+import Tabs from "../Components/TabComponent/Tabs";
 
 function Python() {
   const Quiznames = {

@@ -3,7 +3,52 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow: hidden;
  }
+.App{
+  /*  */
+}
+
+/* navstyle.css */
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #0b2a31;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #a2aaec;
+}
+
+.menu li a.active {
+  background-color: #4848d1;
+  font-weight: bold;
+}
+
+.link {
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-top: 20px;
+}
 
 /* Tab Container */
 .Tabs {
@@ -28,7 +73,8 @@ ul.nav {
   border: 1px solid #39a2db;
   border-radius: 2rem;
   flex-direction: column;
-  @media (max-width: 768px) {
+ 
+   @media (max-width: 768px) {
     /* width: 90%; */
   }
 }
