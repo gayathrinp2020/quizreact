@@ -10,52 +10,58 @@ function ReactJS() {
     prop5: "React Router",
     prop6: "State Management",
     prop7: "Hooks",
-    prop8: "Error Handling",
   };
   const Questionset = [
     {
       tabKey: "prop1",
       questions: [
         {
-          question: "What is Python?",
+          question: "What is a React component?",
           options: [
-            "A high-level programming language",
-            "A type of snake",
-            "A computer hardware",
-            "A software development tool",
+            "A JavaScript function or class that returns JSX",
+            "A folder containing multiple React files",
+            "A styling framework for React applications",
+            "A data structure for storing component state",
           ],
-          answer: "A high-level programming language",
+          answer: "A JavaScript function or class that returns JSX",
         },
         {
-          question: "What is the syntax for printing in Python?",
+          question: "What is the purpose of props in React?",
           options: [
-            "console.log()",
-            "print()",
-            "System.out.println()",
-            "cout <<",
+            "To pass data from parent component to child component",
+            "To define component styles and layout",
+            "To handle user interactions and events",
+            "To manage component state and lifecycle",
           ],
-          answer: "print()",
+          answer: "To pass data from parent component to child component",
         },
         {
           question:
-            "What is the result of the expression '3 + 2 * 4' in Python?",
-          options: ["9", "20", "11", "7"],
-          answer: "11",
-        },
-        {
-          question: "Which of the following is not a Python data type?",
-          options: ["String", "Integer", "Boolean", "Float"],
-          answer: "Boolean",
-        },
-        {
-          question: "What is the correct way to create a function in Python?",
+            "What is the lifecycle method used to fetch data from an API in a class component?",
           options: [
-            "function myFunction()",
-            "def myFunction():",
-            "create function myFunction():",
-            "function = myFunction():",
+            "componentDidMount",
+            "componentWillUnmount",
+            "componentDidUpdate",
+            "render",
           ],
-          answer: "def myFunction():",
+          answer: "componentDidMount",
+        },
+        {
+          question:
+            "Which hook is used to manage state in a functional component?",
+          options: ["useState", "useEffect", "useContext", "useReducer"],
+          answer: "useState",
+        },
+        {
+          question: "What is the purpose of the virtual DOM in React?",
+          options: [
+            "To improve performance by minimizing direct manipulation of the actual DOM",
+            "To enforce component encapsulation and reusability",
+            "To handle component rendering and updates",
+            "To manage component communication and data flow",
+          ],
+          answer:
+            "To improve performance by minimizing direct manipulation of the actual DOM",
         },
       ],
     },
@@ -63,46 +69,56 @@ function ReactJS() {
       tabKey: "prop2",
       questions: [
         {
-          question:
-            "Which of the following is a Python data type for representing whole numbers?",
-          options: ["String", "Integer", "Float", "Boolean"],
-          answer: "Integer",
+          question: "What is JSX in React?",
+          options: [
+            "A syntax extension for JavaScript that allows writing HTML-like code",
+            "A JavaScript library for building user interfaces",
+            "A package manager for React applications",
+            "A state management solution in React",
+          ],
+          answer:
+            "A syntax extension for JavaScript that allows writing HTML-like code",
         },
         {
-          question:
-            "Which Python data type is used to represent a sequence of characters?",
-          options: ["String", "Integer", "Float", "Boolean"],
-          answer: "String",
+          question: "How is JSX different from HTML?",
+          options: [
+            "JSX allows embedding JavaScript expressions within curly braces",
+            "JSX supports a different set of tags and attributes than HTML",
+            "JSX requires a different file extension (.jsx) than HTML",
+            "JSX is not rendered directly by the browser",
+          ],
+          answer:
+            "JSX allows embedding JavaScript expressions within curly braces",
         },
         {
-          question:
-            "What is the Python data type used to represent a true or false value?",
-          options: ["String", "Integer", "Float", "Boolean"],
-          answer: "Boolean",
+          question: "Can JSX elements have children?",
+          options: [
+            "Yes, JSX elements can have nested child elements",
+            "No, JSX elements cannot have any children",
+            "JSX elements can only have text content as children",
+            "JSX elements can have children, but they must be passed as props",
+          ],
+          answer: "Yes, JSX elements can have nested child elements",
         },
         {
-          question:
-            "Which Python data type is used to represent decimal numbers?",
-          options: ["String", "Integer", "Float", "Boolean"],
-          answer: "Float",
+          question: "What is the role of Babel in JSX?",
+          options: [
+            "Babel transpiles JSX code into plain JavaScript",
+            "Babel handles the rendering of JSX elements in the browser",
+            "Babel optimizes JSX code for better performance",
+            "Babel enforces JSX syntax rules and conventions",
+          ],
+          answer: "Babel transpiles JSX code into plain JavaScript",
         },
         {
-          question:
-            "Which Python data type is used to represent a collection of elements, where each element can be accessed by its index?",
-          options: ["String", "Integer", "List", "Boolean"],
-          answer: "List",
-        },
-        {
-          question:
-            "What is the Python data type used to represent an unordered collection of unique elements?",
-          options: ["String", "Integer", "Set", "Boolean"],
-          answer: "Set",
-        },
-        {
-          question:
-            "Which Python data type is used to represent a key-value pair?",
-          options: ["String", "Integer", "Dictionary", "Boolean"],
-          answer: "Dictionary",
+          question: "How can you add inline styles to JSX elements?",
+          options: [
+            "By using the style attribute with a JavaScript object",
+            "By importing a separate CSS file and linking it to the JSX component",
+            "By adding inline CSS using the <css> tag within JSX",
+            "By using the className attribute to reference a CSS class",
+          ],
+          answer: "By using the style attribute with a JavaScript object",
         },
       ],
     },
@@ -110,196 +126,117 @@ function ReactJS() {
       tabKey: "prop3",
       questions: [
         {
-          question: "What is the purpose of the 'if' statement in Python?",
+          question: "What are props in React?",
           options: [
-            "To create a loop that iterates a specific number of times",
-            "To define a block of code that gets executed only if a condition is true",
-            "To convert a value to a boolean data type",
-            "To perform arithmetic operations",
+            "Properties that are passed from a parent component to a child component",
+            "Internal data that is managed within a component",
+            "Event handlers used to handle user interactions",
+            "Methods used for fetching data from an API",
           ],
           answer:
-            "To define a block of code that gets executed only if a condition is true",
+            "Properties that are passed from a parent component to a child component",
         },
         {
-          question: "What is the syntax for an 'if' statement in Python?",
+          question: "How are props passed to a child component?",
           options: [
-            "if (condition) { code }",
-            "if condition { code }",
-            "if [condition]: code",
-            "if condition then code",
+            "Using the parent component's state",
+            "Using the child component's state",
+            "Using the render method of the parent component",
+            "By passing them as attributes in the JSX component",
           ],
-          answer: "if condition: code",
+          answer: "By passing them as attributes in the JSX component",
         },
         {
-          question: "What is the purpose of the 'else' statement in Python?",
+          question: "What is state in React?",
           options: [
-            "To create an alternate condition for the preceding 'if' statement",
-            "To repeat a block of code a specific number of times",
-            "To specify the condition for the 'if' statement",
-            "To define a block of code that gets executed when the 'if' condition is true",
+            "Internal data that is managed within a component",
+            "Properties that are passed from a parent component to a child component",
+            "Event handlers used to handle user interactions",
+            "Methods used for fetching data from an API",
           ],
-          answer:
-            "To define a block of code that gets executed when the 'if' condition is false",
+          answer: "Internal data that is managed within a component",
         },
         {
-          question: "What is the syntax for an 'else' statement in Python?",
+          question: "How is state initialized in a class component?",
           options: [
-            "else { code }",
-            "else: code",
-            "else (condition) { code }",
-            "else then code",
+            "Using the constructor method",
+            "Using the render method",
+            "Using the setState method",
+            "By passing it as a prop from a parent component",
           ],
-          answer: "else: code",
+          answer: "Using the constructor method",
         },
         {
-          question: "What is the purpose of the 'elif' statement in Python?",
+          question: "What is the difference between props and state?",
           options: [
-            "To create an alternate condition for the preceding 'if' statement",
-            "To repeat a block of code a specific number of times",
-            "To specify the condition for the 'else' statement",
-            "To define a block of code that gets executed when a different condition is true",
-          ],
-          answer:
-            "To define a block of code that gets executed when a different condition is true",
-        },
-        {
-          question: "What is the syntax for an 'elif' statement in Python?",
-          options: [
-            "elif (condition) { code }",
-            "elif condition { code }",
-            "elif [condition]: code",
-            "elif condition then code",
-          ],
-          answer: "elif condition: code",
-        },
-        {
-          question: "What is the purpose of the 'for' loop in Python?",
-          options: [
-            "To define a block of code that gets executed only if a condition is true",
-            "To create a loop that repeats a block of code a specific number of times",
-            "To convert a value to a boolean data type",
-            "To perform arithmetic operations",
+            "Props are immutable and are passed from a parent component, while state is mutable and is managed within a component",
+            "Props are used for functional components, while state is used for class components",
+            "Props are used for data storage, while state is used for UI rendering",
+            "Props and state are interchangeable terms in React",
           ],
           answer:
-            "To create a loop that repeats a block of code a specific number of times",
-        },
-        {
-          question: "What is the syntax for a 'for' loop in Python?",
-          options: [
-            "for (let i = 0; i < length; i++) { code }",
-            "for (let item in list) { code }",
-            "for (let item of list) { code }",
-            "for i in range(length): code",
-          ],
-          answer: "for item in list: code",
-        },
-        {
-          question: "What is the purpose of the 'while' loop in Python?",
-          options: [
-            "To define a block of code that gets executed only if a condition is true",
-            "To create a loop that repeats a block of code a specific number of times",
-            "To convert a value to a boolean data type",
-            "To perform arithmetic operations",
-          ],
-          answer:
-            "To create a loop that repeats a block of code as long as a condition is true",
-        },
-        {
-          question: "What is the syntax for a 'while' loop in Python?",
-          options: [
-            "while (condition) { code }",
-            "while condition { code }",
-            "while [condition]: code",
-            "while condition then code",
-          ],
-          answer: "while condition: code",
+            "Props are immutable and are passed from a parent component, while state is mutable and is managed within a component",
         },
       ],
     },
+
     {
       tabKey: "prop4",
       questions: [
         {
-          question: "What is a function in Python?",
+          question: "What are React's lifecycle methods?",
           options: [
-            "A reserved keyword used for defining variables",
-            "A collection of statements that performs a specific task",
-            "A type of data structure in Python",
-            "A way to comment out code in Python",
+            "Methods that are invoked during the different stages of a component's life, such as mounting, updating, and unmounting",
+            "Methods used to handle user interactions in a component",
+            "Methods for fetching data from an API",
+            "Methods for rendering JSX components",
           ],
-          answer: "A collection of statements that performs a specific task",
-        },
-        {
-          question: "What is the syntax for defining a function in Python?",
-          options: [
-            "function myFunction() { code }",
-            "def myFunction(): code",
-            "create function myFunction(): code",
-            "function = myFunction(): code",
-          ],
-          answer: "def myFunction(): code",
+          answer:
+            "Methods that are invoked during the different stages of a component's life, such as mounting, updating, and unmounting",
         },
         {
           question:
-            "What is the purpose of the 'return' statement in a function?",
+            "Which lifecycle method is called immediately after a component is added to the DOM?",
           options: [
-            "To terminate the execution of the function",
-            "To print a value to the console",
-            "To indicate the input parameters of the function",
-            "To specify the output value of the function",
+            "componentDidMount()",
+            "componentWillMount()",
+            "componentDidUpdate()",
+            "componentWillUnmount()",
           ],
-          answer: "To specify the output value of the function",
+          answer: "componentDidMount()",
         },
         {
-          question: "What is a parameter in a function?",
+          question:
+            "Which lifecycle method is called before a component is removed from the DOM?",
           options: [
-            "A variable used for storing the result of a function",
-            "A value passed to the function when it is called",
-            "A reserved keyword used for defining functions",
-            "A data type used for specifying function behavior",
+            "componentWillUnmount()",
+            "componentDidMount()",
+            "componentWillUpdate()",
+            "componentDidUpdate()",
           ],
-          answer: "A value passed to the function when it is called",
+          answer: "componentWillUnmount()",
         },
         {
-          question: "What is an argument in a function?",
+          question:
+            "Which lifecycle method is called whenever there is a change to a component's props or state?",
           options: [
-            "A variable used for storing the result of a function",
-            "A value passed to the function when it is called",
-            "A reserved keyword used for defining functions",
-            "A data type used for specifying function behavior",
+            "componentDidUpdate()",
+            "componentWillReceiveProps()",
+            "shouldComponentUpdate()",
+            "componentWillUpdate()",
           ],
-          answer: "A value passed to the function when it is called",
+          answer: "componentDidUpdate()",
         },
         {
-          question: "What is a default parameter value in a function?",
+          question:
+            "Which lifecycle method is called before a component receives new props?",
           options: [
-            "A value that is automatically assigned to a parameter if no argument is provided",
-            "A reserved keyword used for defining functions",
-            "A variable used for storing the result of a function",
-            "A data type used for specifying function behavior",
+            "componentWillReceiveProps()",
+            "componentDidMount()",
+            "shouldComponentUpdate()",
+            "componentWillUpdate()",
           ],
-          answer:
-            "A value that is automatically assigned to a parameter if no argument is provided",
-        },
-        {
-          question: "What is recursion in Python?",
-          options: [
-            "A way to repeat a block of code multiple times",
-            "A function calling itself directly or indirectly",
-            "A reserved keyword used for defining functions",
-            "A data type used for specifying function behavior",
-          ],
-          answer: "A function calling itself directly or indirectly",
-        },
-        {
-          question: "What is a lambda function in Python?",
-          options: [
-            "A function that accepts a variable number of arguments",
-            "A function that returns multiple values",
-            "An anonymous function that can be defined in a single line",
-            "A function that performs mathematical operations",
-          ],
-          answer: "An anonymous function that can be defined in a single line",
+          answer: "componentWillReceiveProps()",
         },
       ],
     },
@@ -307,86 +244,44 @@ function ReactJS() {
       tabKey: "prop5",
       questions: [
         {
-          question: "What is a data structure in Python?",
+          question: "What is React Router?",
           options: [
-            "A way to store and organize data for efficient access and modification",
-            "A type of variable used for arithmetic operations",
-            "A reserved keyword used for defining functions",
-            "A function that returns multiple values",
+            "A library for handling routing in React applications",
+            "A tool for state management in React applications",
+            "A utility for managing form data in React applications",
+            "A package for styling React components",
           ],
-          answer:
-            "A way to store and organize data for efficient access and modification",
-        },
-        {
-          question: "What is a list in Python?",
-          options: [
-            "An ordered collection of elements",
-            "A way to perform arithmetic operations",
-            "A reserved keyword used for defining functions",
-            "A data type used for specifying function behavior",
-          ],
-          answer: "An ordered collection of elements",
-        },
-        {
-          question: "How do you access an element in a list by its index?",
-          options: [
-            "list.get(index)",
-            "list[index]",
-            "list.access(index)",
-            "list.getElement(index)",
-          ],
-          answer: "list[index]",
-        },
-        {
-          question: "What is a tuple in Python?",
-          options: [
-            "An ordered collection of elements that is immutable",
-            "A way to perform arithmetic operations",
-            "A reserved keyword used for defining functions",
-            "A data type used for specifying function behavior",
-          ],
-          answer: "An ordered collection of elements that is immutable",
-        },
-        {
-          question: "What is a dictionary in Python?",
-          options: [
-            "An unordered collection of key-value pairs",
-            "A way to perform arithmetic operations",
-            "A reserved keyword used for defining functions",
-            "A data type used for specifying function behavior",
-          ],
-          answer: "An unordered collection of key-value pairs",
-        },
-        {
-          question: "How do you access a value in a dictionary using its key?",
-          options: [
-            "dict.access(key)",
-            "dict[key]",
-            "dict.getValue(key)",
-            "dict.retrieve(key)",
-          ],
-          answer: "dict[key]",
-        },
-        {
-          question: "What is a set in Python?",
-          options: [
-            "An unordered collection of unique elements",
-            "A way to perform arithmetic operations",
-            "A reserved keyword used for defining functions",
-            "A data type used for specifying function behavior",
-          ],
-          answer: "An unordered collection of unique elements",
+          answer: "A library for handling routing in React applications",
         },
         {
           question:
-            "What is the difference between a list and a tuple in Python?",
+            "Which component is used to define a route in React Router?",
+          options: ["Route", "Link", "Router", "Switch"],
+          answer: "Route",
+        },
+        {
+          question:
+            "Which component is used to navigate to different routes in React Router?",
+          options: ["Link", "Route", "Router", "Switch"],
+          answer: "Link",
+        },
+        {
+          question:
+            "Which component is used to render the first route that matches the current location in React Router?",
+          options: ["Switch", "Route", "Link", "Router"],
+          answer: "Switch",
+        },
+        {
+          question:
+            "What is the purpose of the `exact` prop in React Router's Route component?",
           options: [
-            "Lists are mutable, while tuples are immutable",
-            "Lists can only store numeric values, while tuples can store any type of data",
-            "Lists can have a variable length, while tuples have a fixed length",
-            "Lists are ordered, while tuples are unordered",
+            "To ensure that the route matches the location exactly (strict matching)",
+            "To specify the order of the routes",
+            "To enable animation for route transitions",
+            "To handle authentication for the route",
           ],
-          answer: "Lists are mutable, while tuples are immutable",
+          answer:
+            "To ensure that the route matches the location exactly (strict matching)",
         },
       ],
     },
@@ -394,82 +289,58 @@ function ReactJS() {
       tabKey: "prop6",
       questions: [
         {
-          question: "What is file handling in Python?",
+          question: "What is state in React?",
           options: [
-            "The process of reading and writing data to files",
-            "A way to perform arithmetic operations on files",
-            "A reserved keyword used for defining file-related functions",
-            "A function that retrieves file metadata",
+            "A JavaScript object used to store and manage data within a component",
+            "A method for updating the appearance of a component",
+            "A built-in React component for managing data",
+            "A technique for optimizing React performance",
           ],
-          answer: "The process of reading and writing data to files",
+          answer:
+            "A JavaScript object used to store and manage data within a component",
         },
         {
-          question: "Which function is used to open a file in Python?",
-          options: ["open()", "read()", "write()", "close()"],
-          answer: "open()",
-        },
-        {
-          question:
-            "What is the default mode when opening a file using the open() function?",
+          question: "Which method is used to update the state in React?",
           options: [
-            "Read mode ('r')",
-            "Write mode ('w')",
-            "Append mode ('a')",
-            "Binary mode ('b')",
+            "setState()",
+            "updateState()",
+            "modifyState()",
+            "changeState()",
           ],
-          answer: "Read mode ('r')",
-        },
-        {
-          question: "How do you read the contents of a file in Python?",
-          options: [
-            "file.read()",
-            "file.write()",
-            "file.read()",
-            "file.append()",
-          ],
-          answer: "file.read()",
+          answer: "setState()",
         },
         {
           question:
-            "What is the purpose of the 'with' statement in file handling?",
+            "What is the recommended way to initialize state in a React component?",
           options: [
-            "To ensure proper handling and closing of the file",
-            "To specify the file access mode",
-            "To read binary data from a file",
-            "To append data to an existing file",
+            "Inside the constructor using this.state",
+            "Inside the render method using this.state",
+            "Inside a separate initialization method",
+            "State is automatically initialized in React components",
           ],
-          answer: "To ensure proper handling and closing of the file",
+          answer: "Inside the constructor using this.state",
         },
         {
-          question: "How do you write data to a file in Python?",
+          question: "What is the role of props in React?",
           options: [
-            "file.write()",
-            "file.read()",
-            "file.append()",
-            "file.open()",
+            "Props are used to pass data from a parent component to a child component",
+            "Props are used to update the state of a component",
+            "Props are used to handle user interactions in a component",
+            "Props are used to define the structure of a component",
           ],
-          answer: "file.write()",
+          answer:
+            "Props are used to pass data from a parent component to a child component",
         },
         {
-          question:
-            "What is the purpose of the 'close()' method in file handling?",
+          question: "What is the difference between state and props in React?",
           options: [
-            "To close the file and release system resources",
-            "To delete the file from the file system",
-            "To retrieve information about the file",
-            "To rename the file",
+            "State is mutable and controlled by the component, while props are immutable and passed from parent components",
+            "State is used for functional components, while props are used for class components",
+            "State is optional in React, while props are mandatory",
+            "State and props are the same and can be used interchangeably in React",
           ],
-          answer: "To close the file and release system resources",
-        },
-        {
-          question: "How do you check if a file exists in Python?",
-          options: [
-            "os.exists()",
-            "file.exists()",
-            "file.exists()",
-            "os.path.exists()",
-          ],
-          answer: "os.path.exists()",
+          answer:
+            "State is mutable and controlled by the component, while props are immutable and passed from parent components",
         },
       ],
     },
@@ -477,143 +348,56 @@ function ReactJS() {
       tabKey: "prop7",
       questions: [
         {
-          question: "What is exception handling in Python?",
+          question: "What are React Hooks?",
           options: [
-            "A way to handle and respond to runtime errors",
-            "A method to suppress error messages",
-            "A process of generating intentional errors",
-            "A technique to bypass error handling mechanisms",
-          ],
-          answer: "A way to handle and respond to runtime errors",
-        },
-        {
-          question: "Which keyword is used to handle exceptions in Python?",
-          options: ["try", "except", "finally", "raise"],
-          answer: "try",
-        },
-        {
-          question:
-            "What is the purpose of the 'except' block in exception handling?",
-          options: [
-            "To specify the code to be executed if an exception occurs",
-            "To indicate the occurrence of an error",
-            "To terminate the program execution",
-            "To raise a new exception",
-          ],
-          answer: "To specify the code to be executed if an exception occurs",
-        },
-        {
-          question:
-            "What is the purpose of the 'finally' block in exception handling?",
-          options: [
-            "To specify the code to be executed regardless of whether an exception occurs or not",
-            "To catch and handle specific types of exceptions",
-            "To raise a new exception",
-            "To terminate the program execution",
+            "Functions that allow you to use state and other React features in functional components",
+            "Hooks are a new type of React component",
+            "Hooks are used for styling in React",
+            "Hooks are used for routing in React",
           ],
           answer:
-            "To specify the code to be executed regardless of whether an exception occurs or not",
+            "Functions that allow you to use state and other React features in functional components",
         },
         {
           question:
-            "What is the purpose of the 'raise' keyword in exception handling?",
+            "Which hook is used to add state to a functional component?",
           options: [
-            "To manually raise a specific exception",
-            "To catch and handle exceptions",
-            "To suppress error messages",
-            "To terminate the program execution",
+            "useState()",
+            "useEffect()",
+            "useContext()",
+            "useReducer()",
           ],
-          answer: "To manually raise a specific exception",
+          answer: "useState()",
         },
         {
-          question:
-            "Which of the following is not a built-in exception in Python?",
+          question: "What is the purpose of the useEffect() hook?",
           options: [
-            "ValueError",
-            "TypeError",
-            "SyntaxError",
-            "NullPointerException",
+            "To perform side effects in a functional component",
+            "To define custom hooks in React",
+            "To handle form submissions in React",
+            "To create reusable components in React",
           ],
-          answer: "NullPointerException",
+          answer: "To perform side effects in a functional component",
         },
         {
-          question:
-            "What is the purpose of the 'else' block in exception handling?",
+          question: "Which hook is used to handle context in React?",
           options: [
-            "To specify the code to be executed if no exceptions occur",
-            "To indicate the occurrence of an error",
-            "To catch and handle specific types of exceptions",
-            "To terminate the program execution",
+            "useContext()",
+            "useReducer()",
+            "useState()",
+            "useEffect()",
           ],
-          answer: "To specify the code to be executed if no exceptions occur",
-        },
-      ],
-    },
-    {
-      tabKey: "prop8",
-      questions: [
-        {
-          question: "What is encapsulation in object-oriented programming?",
-          options: [
-            "The process of hiding internal details and providing a public interface",
-            "The process of reusing code from existing classes",
-            "The process of defining multiple functions with the same name but different parameters",
-            "The process of creating objects from classes",
-          ],
-          answer:
-            "The process of hiding internal details and providing a public interface",
+          answer: "useContext()",
         },
         {
-          question: "What is inheritance in object-oriented programming?",
+          question: "What does the useReducer() hook do?",
           options: [
-            "The process of creating objects from classes",
-            "The process of defining multiple functions with the same name but different parameters",
-            "The process of reusing code from existing classes",
-            "The process of hiding internal details and providing a public interface",
+            "Allows you to manage state using a reducer function",
+            "Allows you to define custom hooks",
+            "Allows you to perform side effects",
+            "Allows you to handle routing in React",
           ],
-          answer: "The process of reusing code from existing classes",
-        },
-        {
-          question: "What is polymorphism in object-oriented programming?",
-          options: [
-            "The process of hiding internal details and providing a public interface",
-            "The process of defining multiple functions with the same name but different parameters",
-            "The process of creating objects from classes",
-            "The process of reusing code from existing classes",
-          ],
-          answer:
-            "The process of defining multiple functions with the same name but different parameters",
-        },
-        {
-          question: "What is a class in object-oriented programming?",
-          options: [
-            "A blueprint for creating objects",
-            "A collection of related functions",
-            "A way to handle exceptions",
-            "A way to define variables",
-          ],
-          answer: "A blueprint for creating objects",
-        },
-        {
-          question: "What is an object in object-oriented programming?",
-          options: [
-            "A blueprint for creating classes",
-            "A collection of related functions",
-            "A way to handle exceptions",
-            "An instance of a class",
-          ],
-          answer: "An instance of a class",
-        },
-        {
-          question: "What is abstraction in object-oriented programming?",
-          options: [
-            "The process of defining multiple functions with the same name but different parameters",
-            "The process of hiding internal details and providing a public interface",
-            "The process of reusing code from existing classes",
-            "The process of creating objects from classes",
-          ],
-          answer:
-            "The process of hiding internal details and providing a public interface",
+          answer: "Allows you to manage state using a reducer function",
         },
       ],
     },
