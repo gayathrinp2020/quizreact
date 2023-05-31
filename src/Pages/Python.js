@@ -20,30 +20,20 @@ function Python() {
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/pythonques"); // Fetch from the server's endpoint
+      const response = await fetch("http://localhost:3000/api/pythonques");
       const data = await response.json();
       setQuestions(data);
-      // setLoading(false);
     } catch (error) {
       console.error("Error fetching questions:", error);
     }
   };
-
   // if (loading) {
   //   return <div>Loading...</div>;
   // }
 
   return (
     <div>
-      <div>
-        {Questionset.map((question, index) => (
-          <div key={index}>
-            <h3>Question: {question.question}</h3>
-            <p>Answer: {question.answer}</p>
-          </div>
-        ))}
-      </div>
-      {/* <Tabs Quiznames={Quiznames} /> */}
+      <Tabs Quiznames={Quiznames} Questionset={Questionset} />
     </div>
   );
 }
