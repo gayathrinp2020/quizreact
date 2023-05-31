@@ -23,8 +23,8 @@ function App() {
           <Route path="/" element={<Python />} />
           <Route path="/javascript" element={<Javascript />} />
           <Route path="/reactjs" element={<ReactJS />} />
-          <Route path="/topic2" element={<Topic2 />} />
-          <Route path="/topic3" element={<Topic3 />} />
+          {/* <Route path="/topic2" element={<Topic2 />} />
+          <Route path="/topic3" element={<Topic3 />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
         {/* <footer>coptRight@2020</footer> */}
@@ -67,7 +67,7 @@ function Navigation() {
             React
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             className={`link ${
               location.pathname === "/topic2" ? "active" : ""
@@ -86,7 +86,7 @@ function Navigation() {
           >
             Topic3
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
