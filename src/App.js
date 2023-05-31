@@ -11,8 +11,8 @@ import Python from "./Pages/Python";
 import Javascript from "./Pages/Javascript";
 import ReactJS from "./Pages/ReactJS";
 import Error from "./Pages/Error";
-import Topic2 from "./Pages/Topic2";
-import Topic3 from "./Pages/Topic3";
+// import Topic2 from "./Pages/Topic2";
+// import Topic3 from "./Pages/Topic3";
 
 function App() {
   return (
