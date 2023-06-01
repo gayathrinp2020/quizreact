@@ -15,9 +15,7 @@ function Python() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(
-          "https://vercel.com/gayathrinp2020/quizreact/api/python"
-        );
+        const response = await fetch("/api/python");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

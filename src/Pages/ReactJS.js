@@ -14,9 +14,7 @@ function ReactJS() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(
-          "https://vercel.com/gayathrinp2020/quizreact/api/reactjs"
-        );
+        const response = await fetch("/api/reactjs");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
