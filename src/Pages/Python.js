@@ -7,34 +7,19 @@ function Python() {
   useEffect(() => {
     const fetchQuiznames = async () => {
       try {
-        const response = await fetch("/api/python/data1");
+        const response = await fetch("/api/python");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log(data);
-        setQuiznames(data);
+        // console.log(data);
+        setQuiznames(data.names);
+        setQuestions(data.questions);
       } catch (error) {
         console.error("Error fetching questions:", error);
       }
     };
-
-    const fetchQuestions = async () => {
-      try {
-        const response = await fetch("/api/python/data2");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        console.log(data);
-        setQuestions(data);
-      } catch (error) {
-        console.error("Error fetching questions:", error);
-      }
-    };
-
     fetchQuiznames();
-    fetchQuestions();
   }, []);
   return (
     <div>
