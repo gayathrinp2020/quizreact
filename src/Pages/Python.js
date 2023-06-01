@@ -5,21 +5,20 @@ function Python() {
   const [Questionset, setQuestions] = useState([]);
   const [Quiznames, setQuiznames] = useState([]);
   useEffect(() => {
-    const fetchQuiznames = async () => {
+    const fetchData = async () => {
       try {
         const response = await fetch("/api/python");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        // console.log(data);
         setQuiznames(data.names);
         setQuestions(data.questions);
       } catch (error) {
         console.error("Error fetching questions:", error);
       }
     };
-    fetchQuiznames();
+    fetchData();
   }, []);
   return (
     <div>

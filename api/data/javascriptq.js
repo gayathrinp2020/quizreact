@@ -1,3 +1,14 @@
+const quiznames = {
+  prop1: "Basics",
+  prop2: "Data Types",
+  prop3: "Control Flow",
+  prop4: "Function",
+  prop5: "Arrays",
+  prop6: "OOPs Concepts",
+  prop7: "DOM and Event Handling",
+  prop8: "Asynchronous JavaScript",
+  prop9: "Regular Expressions",
+};
 const javascriptq = [
   {
     tabKey: "prop1",
@@ -444,4 +455,4 @@ const javascriptq = [
   },
 ];
 
-module.exports = javascriptq;
+module.exports = { data1: quiznames, data2: pythonq };
