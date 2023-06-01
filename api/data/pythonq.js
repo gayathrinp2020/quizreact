@@ -1,4 +1,4 @@
-const python = [
+const pythonq = [
   {
     tabKey: "prop1",
     questions: [
@@ -604,4 +604,4 @@ const python = [
   },
 ];
 
-module.exports = python;
+module.exports = pythonq;

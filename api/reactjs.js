@@ -1,7 +1,7 @@
-const python = require("./data/pythonq");
+const reactjs = require("./data/reactq");
 
 const handler = async (req, res) => {
-  res.json(python);
+  res.json(reactjs);
 };
 
 module.exports = handler;
