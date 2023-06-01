@@ -12,25 +12,23 @@ const Quiznames = {
 };
 function Python() {
   const [Questionset, setQuestions] = useState([]);
-  // const [loading, setLoading] = useState(true);
-
   useEffect(() => {
+    const fetchQuestions = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/python");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        console.log(data);
+        setQuestions(data);
+      } catch (error) {
+        console.error("Error fetching questions:", error);
+      }
+    };
+
     fetchQuestions();
   }, []);
-
-  const fetchQuestions = async () => {
-    try {
-      const response = await fetch("http://localhost:3000/api/pythonques");
-      const data = await response.json();
-      setQuestions(data);
-    } catch (error) {
-      console.error("Error fetching questions:", error);
-    }
-  };
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
   return (
     <div>
       <Tabs Quiznames={Quiznames} Questionset={Questionset} />
