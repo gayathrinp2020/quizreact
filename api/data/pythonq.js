@@ -1,3 +1,13 @@
+const quiznames = {
+  prop1: "Basics",
+  prop2: "Data Types",
+  prop3: "Control Flow",
+  prop4: "Function",
+  prop5: "Data Structures",
+  prop6: "File Handling",
+  prop7: "Exception Handling",
+  prop8: "OOPs Concept",
+};
 const pythonq = [
   {
     tabKey: "prop1",
@@ -604,4 +614,4 @@ const pythonq = [
   },
 ];
 
-module.exports = pythonq;
+module.exports = { data1: quiznames, data2: pythonq };
