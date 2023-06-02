@@ -2,24 +2,24 @@ import React, { useState, useEffect } from "react";
 import TabNavItem from "./TabNavItem";
 import TabContent from "./TabContent";
 import QuizContent from "../QuizComponent/QuizContent";
+import { useLocation } from "react-router-dom";
 
 const Tabs = (props) => {
   const { Quiznames, Questionset } = props;
-  const firstTabKey = Object.keys(Quiznames)[0];
-  const [activeTab, setActiveTab] = useState(firstTabKey);
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState(null);
 
   useEffect(() => {
-    // Retrieve the active tab from localStorage on component mount
-    const storedActiveTab = localStorage.getItem("activeTab");
-    if (storedActiveTab) {
-      setActiveTab(storedActiveTab);
-    }
-  }, []);
+    const searchParams = new URLSearchParams(location.search);
+    const queryTab = searchParams.get("activeTab");
+    setActiveTab(queryTab || Object.keys(Quiznames)[0]);
+  }, [location, Quiznames]);
 
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
-    // Store the active tab in localStorage
-    localStorage.setItem("activeTab", tabId);
+    const searchParams = new URLSearchParams(location.search);
+    searchParams.set("activeTab", tabId);
+    window.history.replaceState(null, "", `?${searchParams.toString()}`);
   };
   return (
     <div className="Tabs">
@@ -31,7 +31,7 @@ const Tabs = (props) => {
             title={value}
             id={key}
             activeTab={activeTab}
-            setActiveTab={handleTabChange}
+            setActiveTab={() => handleTabChange(key)}
           />
         ))}
       </ul>
