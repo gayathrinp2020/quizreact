@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Tabs from "../Components/TabComponent/Tabs";
 
 function Javascript() {
-  const [Quiznames, setQuiznames] = useState([]);
   const [Questionset, setQuestions] = useState([]);
+  const [Quiznames, setQuiznames] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -18,7 +18,6 @@ function Javascript() {
         console.error("Error fetching questions:", error);
       }
     };
-
     fetchData();
   }, []);
   return (

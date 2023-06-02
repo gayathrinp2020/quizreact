@@ -455,4 +455,4 @@ const javascriptq = [
   },
 ];
 
-module.exports = { data1: quiznames, data2: pythonq };
+module.exports = { data1: quiznames, data2: javascriptq };
