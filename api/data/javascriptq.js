@@ -410,7 +410,7 @@ const javascriptq = [
     ],
   },
   {
-    tabKey: "prop8",
+    tabKey: "prop9",
     questions: [
       {
         question: "What is a regular expression?",
