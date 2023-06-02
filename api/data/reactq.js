@@ -1,3 +1,12 @@
+const quiznames = {
+  prop1: "Components",
+  prop2: "JSX in React",
+  prop3: "Props and State",
+  prop4: "Lifecycle Methods",
+  prop5: "React Router",
+  prop6: "State Management",
+  prop7: "Hooks",
+};
 const reactq = [
   {
     tabKey: "prop1",
@@ -377,4 +386,5 @@ const reactq = [
     ],
   },
 ];
-module.exports = reactq;
+
+module.exports = { data1: quiznames, data2: reactq };

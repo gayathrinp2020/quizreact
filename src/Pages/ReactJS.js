@@ -1,32 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Tabs from "../Components/TabComponent/Tabs";
-const Quiznames = {
-  prop1: "Components",
-  prop2: "JSX in React",
-  prop3: "Props and State",
-  prop4: "Lifecycle Methods",
-  prop5: "React Router",
-  prop6: "State Management",
-  prop7: "Hooks",
-};
+
 function ReactJS() {
   const [Questionset, setQuestions] = useState([]);
+  const [Quiznames, setQuiznames] = useState([]);
   useEffect(() => {
-    const fetchQuestions = async () => {
+    const fetchData = async () => {
       try {
         const response = await fetch("/api/reactjs");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log(data);
-        setQuestions(data);
+        setQuiznames(data.names);
+        setQuestions(data.questions);
       } catch (error) {
         console.error("Error fetching questions:", error);
       }
     };
-
-    fetchQuestions();
+    fetchData();
   }, []);
   return (
     <div>
